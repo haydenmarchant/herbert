@@ -20,7 +20,7 @@ public class RowKeyHashingService implements RowKeyService,Serializable {
     private int totalNumRegions;
     private int hashLength = NOT_SET;
     private HashRange hashRange;
-    private static final int JITTER_FACTOR = 15;
+    private static final int JITTER_FACTOR = 5;
     private JitterGen jitterGenerator = new JitterGen(JITTER_FACTOR);
     public static class HashRange implements Serializable {
         private int start;
